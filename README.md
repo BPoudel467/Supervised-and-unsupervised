@@ -1,5 +1,3 @@
-Paste this complete version.
-
 # Machine Learning Based Intrusion Detection System (IDS)
 
 ## Overview
@@ -161,26 +159,38 @@ These figures are used in the dissertation results chapter.
 
 ## Installation
 
-Clone the repository
+### Prerequisites
 
+- Python **3.11 or 3.12** (recommended)
+- (Optional) Git
 
-cd ids-comparative-study
+### Setup (Windows / PowerShell)
 
+From the project root:
 
-Install dependencies:
-
-
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
 pip install -r requirements.txt
+```
+
+If PowerShell blocks activation, run this once (then re-run the activate command):
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
 
 
 ---
 
 ## Running the System
 
-To run the full IDS pipeline:
+### 1) Run the full IDS pipeline (generate outputs)
 
-
+```powershell
 python main.py
+```
 
 
 This script will:
@@ -198,8 +208,11 @@ This script will:
 
 To browse all generated figures, tables, and saved models in one place:
 
-- Install dependencies: `pip install -r requirements.txt`
-- Start the dashboard: `python -m streamlit run ui_app.py`
+### 2) Start the dashboard (Streamlit)
+
+```powershell
+streamlit run ui_app.py
+```
 
 The dashboard auto-discovers files under:
 
