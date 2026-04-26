@@ -1,0 +1,4 @@
+[client]
+# Hide Streamlit's default Deploy button / full toolbar.
+toolbarMode = "minimal"
+
